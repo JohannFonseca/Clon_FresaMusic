@@ -1,9 +1,9 @@
 /* 
-   aca guardamos los colores y fuentes para usarlos despues
+   aca se guardan los colores y fuentes para usarlos después
 */
 :root {
-    --color-nav-bg: #00122e; /* el azul oscuro del menu de arriba */
-    --color-primary: #004ea1; /* el azul mas claro del logo */
+    --color-nav-bg: #00122e; /* el azul oscuro que se eligió para el menu */
+    --color-primary: #004ea1; /* el azul del logo */
     --color-text-white: #ffffff;
     --color-text-gray: #777;
     --color-bg-light: #f5f5f5;
@@ -21,15 +21,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-body);
-    background-color: var(--color-bg-light);
+    background-color: #ffffff;
     color: var(--color-nav-bg);
 }
 
-/* estilo del encabezado oscuro de arriba */
+/* estilo del encabezado de arriba */
 .site-header {
     background-color: var(--color-nav-bg);
     color: var(--color-text-white);
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -42,39 +42,23 @@ body {
     padding: 0 2rem;
 }
 
-/* estilo del logo pequeño arriba a la izquierda */
+/* logo arriba a la izquierda, ahora mucho mas grande */
 .logo-top {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
 }
 
-.logo-swirl {
-    background: var(--color-primary);
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 900;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50% 50% 50% 0;
-    transform: rotate(-15deg);
-}
-
-.logo-text {
-    font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: 1.2rem;
-    letter-spacing: -1px;
+.header-logo-img {
+    height: 140px; /* se puso el logo mucho mas grande como se pidio */
+    width: auto;
+    display: block;
 }
 
 /* estilo de las letras del menu */
 .header-nav ul {
     list-style: none;
     display: flex;
-    gap: 1.2rem;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
 }
@@ -82,21 +66,21 @@ body {
 .header-nav ul li a {
     color: var(--color-text-white);
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 600;
     transition: var(--transition);
 }
 
-/* efecto cuando pasas el mouse por el menu */
+/* cuando paso el mouse por el menu */
 .header-nav ul li a:hover {
     opacity: 0.7;
 }
 
-/* estilo del buscador blanco a la derecha */
+/* buscador blanco */
 .header-right {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .search-bar {
@@ -108,109 +92,124 @@ body {
 .search-bar input {
     background-color: #ffffff;
     border: none;
-    padding: 0.6rem 1rem;
+    padding: 0.7rem 1.2rem;
     padding-right: 2.5rem;
     border-radius: 4px;
-    font-size: 0.8rem;
-    width: 250px;
+    font-size: 0.85rem;
+    width: 280px;
 }
 
 .search-btn {
     position: absolute;
-    right: 5px;
+    right: 8px;
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
-/* el icono del carrito */
+/* el carrito */
 .cart-status {
     position: relative;
     cursor: pointer;
+    font-size: 1.2rem;
 }
 
 .cart-count {
     background-color: #00aeef;
     color: white;
-    font-size: 0.6rem;
-    padding: 0.1rem 0.3rem;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
     border-radius: 4px;
     position: absolute;
-    top: -5px;
-    right: -10px;
+    top: -8px;
+    right: -12px;
 }
 
-/* estilo del area del banner grande */
+/* area del banner, aca se arreglo lo del espacio en blanco */
 .hero-slider {
     position: relative;
     background-color: #ffffff;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 .hero-container-image {
     width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    line-height: 0; /* truco para que no quede espacio abajo */
+    font-size: 0;
 }
 
 .main-banner-img {
     width: 100%;
     height: auto;
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
-/* estilo de las flechas para mover el banner */
+/* flechas para el banner */
 .slider-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.2);
     border: none;
-    font-size: 1.5rem;
-    padding: 1rem 0.5rem;
+    font-size: 2.5rem;
+    padding: 1.5rem 0.5rem;
     cursor: pointer;
     z-index: 100;
-    color: #444;
+    color: #333;
 }
 
 .slider-arrow:hover {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.5);
 }
 
 .slider-arrow.prev { left: 0; }
 .slider-arrow.next { right: 0; }
 
-/* el boton de whatsapp flotante */
+/* boton de whatsapp */
 .whatsapp-btn {
     position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    width: 60px;
-    height: 60px;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    width: 65px;
+    height: 65px;
     background: #25d366;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     z-index: 2000;
 }
 
 .whatsapp-btn img {
-    width: 35px;
+    width: 38px;
 }
 
-/* ajustes para que se vea bien en celulares */
+/* ajustes para celulares */
 @media (max-width: 1024px) {
     .header-content {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 2rem;
+        padding-bottom: 1rem;
+    }
+    .header-logo-img {
+        height: 80px;
     }
     .search-bar input {
         width: 100%;
+    }
+    .slider-arrow {
+        font-size: 1.5rem;
+        padding: 1rem 0.3rem;
     }
 }
