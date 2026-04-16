@@ -1,69 +1,80 @@
-<!-- inicio el documento -->
+<!-- aca empieza todo el html -->
+<!DOCTYPE html>
 <html lang="es">
-    <!-- configuracion y el titulo de la pagina -->
+<head>
+    <!-- cosas basicas del navegador y titulo -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clon Fresa Music - Tienda de Instrumentos Musicales</title>
-    <!-- fuentes de google para que se vea bien -->
+    <!-- cargo las letras montserrat y inter de google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-    <!-- el link a los estilos -->
+    <!-- el archivo de los estilos css -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- encabezado principal -->
+    <!-- toda la parte de arriba del sitio -->
     <header class="site-header">
         <div class="header-content">
             <div class="header-left">
-                <!-- logo que subi -->
+                <!-- el logo que me pasaron en la carpeta img -->
                 <div class="logo-top">
-                    <img src="img/logo.png" alt="Fresa Music Logo" class="header-logo-img">
+                    <img src="img/logo fresa.png" alt="Fresa Music Logo" class="header-logo-img">
                 </div>
             </div>
-            <!-- menu de navegacion -->
+            
+            <!-- los links para moverse por la pagina -->
             <nav class="header-nav">
                 <ul>
                     <li><a href="#">INICIO</a></li>
-                    <li><a href="#" class="has-submenu">TIENDA</a></li>
+                    <li><a href="#" class="has-submenu">TIENDA <span class="arrow-down">⌵</span></a></li>
                     <li><a href="#">LA EMPRESA</a></li>
                     <li><a href="#">SERVICIOS</a></li>
                     <li><a href="#">CONTACTO</a></li>
                     <li><a href="#">INICIO DE SESIÓN</a></li>
                 </ul>
             </nav>
+
+            <!-- buscador y el carrito de compras -->
             <div class="header-right">
-                <!-- buscador del lado derecho -->
+                <!-- la barra blanca para buscar -->
                 <div class="search-bar">
+                    <button class="search-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
                     <input type="text" placeholder="Buscar productos ...">
-                    <button class="search-btn">🔍</button>
                 </div>
                 <!-- icono del carrito -->
                 <div class="cart-status">
-                    <span class="cart-icon">🛒</span>
-                    <span class="cart-count">0</span>
+                    <div class="cart-icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        <span class="cart-count">0</span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- aca va el contenido fuerte de la pagina -->
     <main>
-        <!-- banner principal con imagen de fondo -->
+        <!-- el banner grandote con la imagen de fondo -->
         <section class="hero-slider">
-            <!-- flechitas para mover el banner -->
-            <button class="slider-arrow prev">❮</button>
-            <button class="slider-arrow next">❯</button>
-
-            <!-- el fondo del banner -->
             <div class="hero-container-image">
-                <img src="img/ImagenFondo.png" alt="Fresa Music Banner Principal" class="main-banner-img">
+                <img src="img/www.fresamusic.com (1).png" alt="Fresa Music Banner Principal" class="main-banner-img">
             </div>
             
-            <!-- el boton de whatsapp que flota -->
-            <a href="#" class="whatsapp-btn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            </a>
+            <!-- el coso flotante de whatsapp para que nos hablen -->
+            <div class="whatsapp-container">
+                <div class="chat-bubble">
+                    ¿Necesitas ayuda? <br>
+                    <strong>Chatea con nosotros</strong>
+                </div>
+                <a href="https://wa.me/something" class="whatsapp-btn" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+            </div>
         </section>
     </main>
 

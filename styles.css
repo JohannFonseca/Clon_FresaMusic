@@ -1,18 +1,14 @@
-/* 
-   aca se guardan los colores y fuentes para usarlos después
-*/
+/* aca defino los colores y letras globales */
 :root {
-    --color-nav-bg: #00122e; /* el azul oscuro que se eligió para el menu */
-    --color-primary: #004ea1; /* el azul del logo */
+    --color-nav-bg: #000c1f; /* el azul oscuro de siempre */
     --color-text-white: #ffffff;
-    --color-text-gray: #777;
-    --color-bg-light: #f5f5f5;
+    --color-bg-white: #ffffff;
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Inter', sans-serif;
     --transition: all 0.3s ease;
 }
 
-/* esto limpia los margenes de la pagina */
+/* reseteo para que no queden espacios raros */
 * {
     box-sizing: border-box;
 }
@@ -21,44 +17,51 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-body);
-    background-color: #ffffff;
+    background-color: var(--color-bg-white);
     color: var(--color-nav-bg);
+    overflow-x: hidden;
 }
 
-/* estilo del encabezado de arriba */
+/* estilos para la barra azul de arriba */
 .site-header {
     background-color: var(--color-nav-bg);
     color: var(--color-text-white);
-    padding: 0.5rem 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: 85px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1000;
 }
 
+/* alineacion del contenido del encabezado */
 .header-content {
-    max-width: 1400px;
+    max-width: 1600px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 40px;
 }
 
-/* logo arriba a la izquierda, ahora mucho mas grande */
+/* tamaño del logo a la izquierda */
 .logo-top {
     display: flex;
     align-items: center;
 }
 
 .header-logo-img {
-    height: 140px; /* se puso el logo mucho mas grande como se pidio */
+    height: 55px;
     width: auto;
     display: block;
 }
 
-/* estilo de las letras del menu */
+/* estilo de los textos del menu */
 .header-nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 30px; 
     margin: 0;
     padding: 0;
 }
@@ -66,150 +69,182 @@ body {
 .header-nav ul li a {
     color: var(--color-text-white);
     text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-/* cuando paso el mouse por el menu */
+/* el icono de flechita para tienda */
+.arrow-down {
+    font-size: 11px;
+    font-weight: 400;
+}
+
 .header-nav ul li a:hover {
-    opacity: 0.7;
+    color: #00aeef;
 }
 
-/* buscador blanco */
+/* buscador y carrito al lado derecho */
 .header-right {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 25px;
 }
 
+/* el rectangulo blanco para buscar productos */
 .search-bar {
     position: relative;
     display: flex;
     align-items: center;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 0 12px;
+    width: 450px;
+    height: 42px;
 }
 
 .search-bar input {
-    background-color: #ffffff;
+    background: none;
     border: none;
-    padding: 0.7rem 1.2rem;
-    padding-right: 2.5rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    width: 280px;
+    padding: 0 10px;
+    font-size: 14px;
+    width: 100%;
+    color: #333;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: #888888;
 }
 
 .search-btn {
-    position: absolute;
-    right: 8px;
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    color: #888888;
+    display: flex;
+    align-items: center;
+    padding: 0;
 }
 
-/* el carrito */
+/* el icono del carrito y el contador azul */
 .cart-status {
     position: relative;
     cursor: pointer;
-    font-size: 1.2rem;
+    color: var(--color-text-white);
+}
+
+.cart-icon-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .cart-count {
-    background-color: #00aeef;
+    background-color: #00a8e8;
     color: white;
-    font-size: 0.7rem;
-    padding: 0.1rem 0.4rem;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 6px;
     border-radius: 4px;
     position: absolute;
-    top: -8px;
+    top: -10px;
     right: -12px;
 }
 
-/* area del banner, aca se arreglo lo del espacio en blanco */
+/* seccion de la imagen principal hero */
 .hero-slider {
     position: relative;
     background-color: #ffffff;
     overflow: hidden;
-    display: block;
     width: 100%;
+    height: 85vh;
     margin: 0;
     padding: 0;
-    border: none;
 }
 
 .hero-container-image {
     width: 100%;
-    margin: 0;
-    padding: 0;
-    line-height: 0; /* truco para que no quede espacio abajo */
-    font-size: 0;
+    height: 100%;
+    position: relative;
 }
 
 .main-banner-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    margin: 0;
-    padding: 0;
+    object-fit: cover;
 }
 
-/* flechas para el banner */
-.slider-arrow {
+/* estilos para el boton de whatsapp en la esquina */
+.whatsapp-container {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2000;
+}
+
+.chat-bubble {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+    width: 210px;
+    text-align: center;
+    position: relative;
+}
+
+.chat-bubble::after {
+    content: '';
     position: absolute;
+    right: -8px;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.2);
-    border: none;
-    font-size: 2.5rem;
-    padding: 1.5rem 0.5rem;
-    cursor: pointer;
-    z-index: 100;
-    color: #333;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid white;
 }
 
-.slider-arrow:hover {
-    background: rgba(255,255,255,0.5);
-}
-
-.slider-arrow.prev { left: 0; }
-.slider-arrow.next { right: 0; }
-
-/* boton de whatsapp */
 .whatsapp-btn {
-    position: fixed;
-    right: 2.5rem;
-    bottom: 2.5rem;
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     background: #25d366;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    z-index: 2000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
 .whatsapp-btn img {
-    width: 38px;
+    width: 34px;
 }
 
-/* ajustes para celulares */
-@media (max-width: 1024px) {
+/* esto es para que se vea bien en celulares */
+@media (max-width: 1100px) {
+    .site-header {
+        height: auto;
+        padding: 15px 0;
+    }
     .header-content {
         flex-direction: column;
-        gap: 2rem;
-        padding-bottom: 1rem;
+        gap: 15px;
     }
-    .header-logo-img {
-        height: 80px;
-    }
-    .search-bar input {
+    .search-bar {
         width: 100%;
     }
-    .slider-arrow {
-        font-size: 1.5rem;
-        padding: 1rem 0.3rem;
+    .chat-bubble {
+        display: none;
     }
 }
