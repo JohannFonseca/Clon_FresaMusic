@@ -1,79 +1,72 @@
-<!DOCTYPE html>
+<!-- inicio del documento -->
 <html lang="es">
-<head>
+    <!-- configuracion de la pagina y titulo -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clon Fresa Music - Tienda de Instrumentos Musicales</title>
-    <meta name="description" content="Bienvenido a Fresa Music, tu tienda de instrumentos musicales, guitarras, amplificadores y más.">
+    <!-- fuentes de google para que se vea bonito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- link al archivo de estilos css -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Encabezado y Navegación -->
-    <header>
-        <div class="logo">
-            <h1>Fresa Music</h1>
+    <!-- encabezado principal oscuro -->
+    <header class="site-header">
+        <div class="header-content">
+            <div class="header-left">
+                <!-- logo de la izquierda -->
+                <div class="logo-top">
+                    <span class="logo-swirl">S</span>
+                    <span class="logo-text">FRESA MUSIC</span>
+                </div>
+            </div>
+            <!-- menu de navegacion central -->
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#" class="has-submenu">TIENDA</a></li>
+                    <li><a href="#">LA EMPRESA</a></li>
+                    <li><a href="#">SERVICIOS</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                    <li><a href="#">INICIO DE SESIÓN</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <!-- buscador del lado derecho -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar productos ...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <!-- icono del carrito -->
+                <div class="cart-status">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">INICIO</a></li>
-                <li><a href="#">TIENDA</a></li>
-                <li><a href="#">GUITARRAS</a></li>
-                <li><a href="#">BAJOS</a></li>
-                <li><a href="#">TECLAS</a></li>
-                <li><a href="#">AUDIO</a></li>
-                <li><a href="#">CONTACTO</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <!-- Sección Hero (Banner Principal) -->
-        <section id="hero">
-            <div class="hero-content">
-                <h2>Encuentra tu sonido ideal</h2>
-                <p>Explora nuestra colección exclusiva de guitarras y equipo profesional.</p>
-                <img src="img/hero.png" alt="Interior moderno de una tienda de instrumentos musicales con guitarras eléctricas y amplificadores de alta gama">
-            </div>
-        </section>
+        <!-- banner principal con la imagen real -->
+        <section class="hero-slider">
+            <!-- flechitas para mover el banner -->
+            <button class="slider-arrow prev">❮</button>
+            <button class="slider-arrow next">❯</button>
 
-        <!-- Sección de Marcas Destacadas (Simulada) -->
-        <section id="brands">
-            <h3>Nuestras Marcas</h3>
-            <div class="brand-list">
-                <article>
-                    <h4>Fender</h4>
-                    <p>Un ícono estadounidense, fundado en el sur de California.</p>
-                </article>
-                <article>
-                    <h4>Gibson</h4>
-                    <p>Tradición y calidad artesanal en cada cuerda.</p>
-                </article>
-                <article>
-                    <h4>Yamaha</h4>
-                    <p>Innovación y versatilidad para todo tipo de músicos.</p>
-                </article>
+            <!-- contenedor de la imagen del banner -->
+            <div class="hero-container-image">
+                <img src="img/hero.png" alt="Fresa Music Banner Principal" class="main-banner-img">
             </div>
-        </section>
-
-        <!-- Sección de Categorías Populares -->
-        <section id="categories">
-            <h3>Categorías Populares</h3>
-            <ul>
-                <li>Guitarras Eléctricas</li>
-                <li>Amplificadores de Bajo</li>
-                <li>Pianos Digitales</li>
-                <li>Interfaces de Audio</li>
-            </ul>
+            
+            <!-- el boton verde de whatsapp que flota -->
+            <a href="#" class="whatsapp-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
         </section>
     </main>
-
-    <!-- Pie de Página -->
-    <footer>
-        <div class="footer-info">
-            <p>&copy; 2026 Fresa Music. Clon realizado con fines educativos.</p>
-            <p>Ubicación: Costa Rica | Contacto: info@fresamusic.com</p>
-        </div>
-    </footer>
 
 </body>
 </html>
